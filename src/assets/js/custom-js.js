@@ -52,6 +52,7 @@ if (document.querySelector('.triger-self-variant')) {
 if (document.querySelector('.contact-me')) {
   document.querySelector('.contact-me').addEventListener('click', function (e) {
     e.preventDefault();
+    document.querySelector('html').classList.toggle('freeze-scroll');
     this.classList.toggle('open');
     document.querySelector('.contact-popup').classList.toggle('open');
   });
@@ -74,5 +75,8 @@ function clickOnWindowHandler(e) {
   ) {
     document.querySelector('.contact-me').classList.remove('open');
     document.querySelector('.contact-popup').classList.remove('open');
+    document.querySelector('html').classList.remove('freeze-scroll');
   }
+
+  window.removeEventListener('click', clickOnWindowHandler);
 }

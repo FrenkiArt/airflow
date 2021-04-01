@@ -360,7 +360,7 @@ svg {
   }
 
   // .contact-popup__bg
-  /* &__bg {
+  &__bg {
     position: absolute;
     background-color: #151515;
     z-index: 1;
@@ -369,12 +369,17 @@ svg {
     top: 0;
     left: 50%;
     transform: translate(-50%, 0);
-  } */
+    opacity: 0;
+  }
 
   &.open {
     pointer-events: auto;
 
     .contact-popup__inner {
+      opacity: 1;
+    }
+
+    .contact-popup__bg {
       opacity: 1;
     }
   }
@@ -385,5 +390,17 @@ svg {
 
   .social {
     margin: 0 30px;
+  }
+}
+
+/* замораживаем скролл */
+
+.freeze-scroll {
+  //height: 100vh;
+  overflow: hidden;
+
+  body {
+    height: 100%;
+    overflow: auto scroll;
   }
 }
