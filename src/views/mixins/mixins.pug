@@ -99,3 +99,47 @@ mixin input-group-flexible(args)
   type: 'submit'
 //-}])
 
+mixin phone(args)
+  |
+  |
+  a(href="tel:+79525017377").contact-item
+    <svg width="21" height="20">
+      <use xlink:href="./assets/svg/svg_sprite.svg#icon-phone"></use>
+    </svg> 
+    span 7 (952) 501-73-77
+  |
+  |
+
+mixin mail(args)
+  |
+  |
+  a(href="mailto:project.airflowdesign@gmail.com").contact-item 
+    <svg width="24" height="20">
+      <use xlink:href="./assets/svg/svg_sprite.svg#icon-mail"></use>
+    </svg> 
+    span project.airflowdesign@gmail.com
+  |
+  |
+
+mixin check-input(args)
+  |
+  |
+  .check-input(
+    class=args.classes
+  )
+    |
+    |
+    .check-input__text
+      span.right Правильно
+      span.no-right Неправильно 
+    |
+    |
+    .check-input__circle
+    |
+    |
+  |
+  |
+
+//-+check-input({
+    classes: "valid",
+  })

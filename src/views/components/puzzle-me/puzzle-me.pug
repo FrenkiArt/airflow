@@ -1,0 +1,153 @@
+//- src/views/components/puzzle-me/puzzle-me.pug
+|
+| 
+#puzzle-me.puzzle-me
+  |
+  |  
+  .container 
+    |
+    |
+    .puzzle-me__gradient 
+    |
+    |
+    .puzzle-me__aside 
+      |
+      |
+      .wrap-uni-author
+        +uni-author({
+          classes: "uni-author--puzzle-me",
+          title: "ARSENIY POPKOV",
+          name: "ГДЕ Я ЕСТЬ?",
+        })
+      |
+      |
+      +social({
+        classes: "vertical",
+      })
+      |
+      |
+    |
+    |
+    .puzzle-me__content 
+      |
+      |
+      .puzzle-me__title 
+        | — Озадачьте меня.
+        br
+        | Сейчас.
+      |
+      |
+      .uni-number / 04
+      |
+      |
+      .puzzle-me__wrap-form 
+        |
+        |
+        form(action="#")#form.form
+          |
+          |
+          .form__line 
+            |
+            |
+            label(for="client_name").form__label Имя и фамилия
+            |
+            |
+            .form__wrap-input  
+              input(type="text" id="client_name" name="client_name" placeholder="Arseniy Popkov" required minlength=3).form__input.input-name
+              .form__check
+                +check-input({
+                  classes: "valid",
+                })
+            |
+            |
+          |
+          |
+          .form__line 
+            |
+            |
+            label(for="client_phone").form__label Ваш телефон
+            |
+            |
+            .form__wrap-input  
+              input(type="text" id="client_phone" name="client_phone" placeholder="+7 (952) 501-73-77" required).form__input.input-phone
+              .form__check
+                +check-input({
+                  classes: "no-valid",
+                })
+            |
+            |
+          |
+          |
+          .form__line 
+            |
+            |
+            label.form__label Ваш бюджет
+            |
+            |
+            .form__list-checkers
+              label
+                input(type="radio", name="budget", value="less_10000", required)
+                span меньше 10.000 р.
+              label
+                input(type="radio", name="budget", value="10000-25000", required)
+                span 10.000-25.000
+              label
+                input(type="radio", name="budget", value="25000-60000", required)
+                span 25.000-60.000
+              label
+                input(type="radio", name="budget", value="self_variant", required).triger-self-variant
+                span Свой вариант
+            |
+            |
+          |
+          |
+          .form__line.for-self-variant.dn
+            |
+            |
+            label.form__label Введите ваш вариант
+            |
+            |
+            .form__wrap-input  
+              input(type="text" placeholder="Ваш вариант").form__input.
+            |
+            |
+          |
+          |
+          .form__line
+            |
+            |
+            label.form__label Что требуется?
+            |
+            |
+            .form__list-checkers
+              label
+                input(type="radio", name="what-need", value="Web-Design", required)
+                span Web-Design
+              label
+                input(type="radio", name="what-need", value="Mobile-app", required)
+                span Mobile app
+              label
+                input(type="radio", name="what-need", value="3D", required)
+                span 3D 
+              label
+                input(type="radio", name="what-need", value="Другое", required) 
+                span Другое 
+            |
+            |
+          |
+          |
+          button(type="submit").form__submit
+            img(src="assets/svg/icon_form_arr.svg", alt="" loading="lazy") 
+            .circles
+          |
+          |
+        |
+        |
+      |
+      |
+    |
+    |
+  |
+  |
+|
+|

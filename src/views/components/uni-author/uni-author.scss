@@ -1,0 +1,47 @@
+// src/views/components/uni-author/uni-author.scss
+@import '../../../assets/styles/utils/variables';
+
+.uni-author {
+  color: #ffffff;
+
+  // .uni-author__title
+  &__title {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 21px;
+    white-space: nowrap;
+  }
+
+  // .uni-author__name
+  &__name {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 23px;
+    white-space: nowrap;
+  }
+}
+
+.uni-author--first {
+  opacity: 0.2;
+
+  .uni-author__title {
+    position: relative;
+  }
+
+  .uni-author__name {
+    position: relative;
+  }
+}
+
+.uni-author--puzzle-me {
+  .uni-author__title {
+    font-size: 15px;
+    line-height: 30px;
+    opacity: 0.2;
+  }
+
+  .uni-author__name {
+    font-size: 25px;
+    line-height: 33px;
+  }
+}

@@ -1,0 +1,107 @@
+//- src/views/components/first/first.pug
+
+|
+|
+#first.first 
+  |
+  |
+  .container 
+    |
+    |
+    .wrap-dekor
+      .dekor 
+        .line
+        .item Web-Design
+        .item Mobile app
+        .item 3D 
+        .item Другое
+        .line
+    |
+    |
+    .first__bg-gradient
+    |
+    |
+    .lines 
+    |
+    |
+    .first__row 
+      |
+      |
+      .first__left 
+        |
+        |
+        .first__top
+          +uni-author({
+            classes: "",
+            title: "PORTFOLIO OF",
+            name: "ARSENIY POPKOV",
+          })
+          |
+          |
+          .first__title
+            | — Больше, чем просто 
+            br
+            | дизайн.
+          |
+          |
+        |
+        |
+        .first__bottom 
+          |
+          |
+          img(src="assets/svg/icon_load.svg", alt="" loading="lazy").load-icon 
+          |
+          |
+          .wrap-uni-author
+            +uni-author({
+              classes: "uni-author--first",
+              title: "ABOUT ME",
+              name: "ARSENIY POPKOV",
+            })
+          |
+          |
+          a(href="#form").go-to-form
+            img(src="assets/svg/icon_form_arr.svg", alt="" loading="lazy") 
+            .circles
+          |
+          |
+        |
+        |
+      |
+      |
+      .first__right 
+        |
+        |
+        img(src="assets/images/first_bg_img.png", alt="" loading="lazy").bg-img
+        |
+        | 
+        .triple-title(data-text="Design") Design
+        |
+        |
+        .triple-images 
+          img(src="assets/images/site_img_3.jpg", alt="" loading="lazy")
+          img(src="assets/images/site_img_2.jpg", alt="" loading="lazy")
+          img(src="assets/images/site_img_1.jpg", alt="" loading="lazy") 
+        |
+        |
+      |
+      |
+    |
+    |
+    ul.list-ancors 
+      li 
+        a(href="#first").active 01
+      li 
+        a(href="#about") 02
+      li 
+        a(href="#portfolio") 03
+      li 
+        a(href="#puzzle-me") 04
+      li 
+        a(href="#footer") 05
+    |
+    |
+  |
+  |
+|
+|

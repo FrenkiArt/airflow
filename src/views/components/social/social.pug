@@ -1,32 +1,46 @@
 //- src/views/components/social/social.pug
-|
-|
-.social 
+
+mixin social(args)
   |
   |
-  a(href="#") 
+  .social(
+    class=args.classes
+  )
     |
     |
-    svg
+    a(href="#") 
+      |
+      |
+      <svg width="28" height="17">
+        <use xlink:href="./assets/svg/svg_sprite.svg#icon-vk"></use>
+      </svg>
+      |
+      |
+    |
+    |
+    a(href="#") 
+      |
+      |
+      <svg width="25" height="24">
+        <use xlink:href="./assets/svg/svg_sprite.svg#icon-insta"></use>
+      </svg>
+      |
+      |
+    |
+    |
+    a(href="#") 
+      |
+      |
+      <svg width="24" height="19">
+        <use xlink:href="./assets/svg/svg_sprite.svg#icon-twitter"></use>
+      </svg>
+      |
+      |
     |
     |
   |
   |
-  a(href="#") 
-    |
-    |
-    svg
-    |
-    |
-  |
-  |
-  a(href="#") 
-    |
-    |
-    svg
-    |
-    |
-  |
-  |
-|
-|
+
+//-+social({
+    classes: ""
+  })

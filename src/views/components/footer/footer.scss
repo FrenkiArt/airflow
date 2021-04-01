@@ -3,6 +3,66 @@
 
 .footer {
   position: relative;
+  padding: 36px 0 46px;
+
+  // .footer__row
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  // .footer__author
+  &__author {
+    position: relative;
+    padding: 8px;
+    min-height: 172px;
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    //1578
+    // width: 309px;
+    width: 19.5%;
+    flex-shrink: 0;
+  }
+
+  // .footer__social
+  &__social {
+    position: relative;
+    padding: 8px;
+    min-height: 172px;
+    border-left: 1px solid rgba(255, 255, 255, 0.05);
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    // width: 413px;
+    width: 26.1%;
+    flex-shrink: 0;
+    justify-content: center;
+  }
+
+  // .footer__contacts
+  &__contacts {
+    position: relative;
+    padding: 8px 36px 8px 8px;
+    min-height: 172px;
+    border-left: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+
+    .contact-item {
+      margin-right: 0;
+      margin-left: 76px;
+    }
+  }
+
+  .container {
+    position: relative;
+  }
 }
 
 /*

@@ -1,9 +1,11 @@
 // Вендоры
 import 'normalize.css';
 import '../node_modules/svgxuse/svgxuse.min.js';
+import Cleave from '../node_modules/cleave.js/dist/cleave.min.js';
+import '../node_modules/cleave.js/dist/addons/cleave-phone.ru';
 
 // Шрифты
-import './assets/fonts/blacklist/font.css';
+// import './assets/fonts/blacklist/font.css';
 
 // Миксины
 import './views/mixins/mixins.scss';
@@ -14,6 +16,10 @@ import './assets/styles/style.scss';
 // Модули нашего проекта
 import './views/components/breadcrumbs/breadcrumbs.scss';
 import './views/components/buttons/button.scss';
+import './views/components/social/social.scss';
+import './views/components/first/first.scss';
+import './views/components/puzzle-me/puzzle-me.scss';
+import './views/components/uni-author/uni-author.scss';
 import './views/components/footer/footer.scss';
 import './views/components/form/form.scss';
 import './views/components/header/header.scss';
@@ -28,8 +34,16 @@ import './views/components/popup/popup.scss';
 import {myPopup} from './views/components/popup/popup.js';
 import './views/mixins/mixins.scss';
 
+import './views/components/about/about.scss';
+import './views/components/portfolio/portfolio.scss';
+
 // Страницы
 // import './views/components/pages/index.scss';
+
+var cleave = new Cleave('.input-phone', {
+  phone: true,
+  phoneRegionCode: 'ru',
+});
 
 /* Про Попапы */
 if (document.querySelector('[data-popup]')) {

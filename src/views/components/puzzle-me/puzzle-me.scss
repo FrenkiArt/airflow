@@ -1,0 +1,242 @@
+// src/views/components/puzzle-me/puzzle-me.scss
+@import '../../../assets/styles/utils/variables';
+
+.puzzle-me {
+  padding: 0 0 30px;
+  margin-top: -230px;
+
+  // .puzzle-me__gradient
+  &__gradient {
+    position: absolute;
+    height: 455px;
+    left: -64px;
+    width: 623px;
+    bottom: -30px;
+    background: linear-gradient(
+      279.71deg,
+      #1d1d1d 1.74%,
+      rgba(29, 29, 29, 0) 89.78%
+    );
+  }
+
+  // .puzzle-me__aside
+  &__aside {
+    margin-right: 30px;
+    display: flex;
+    align-items: flex-end;
+    margin-left: auto;
+    position: relative;
+
+    .social {
+      background-color: #111111;
+      width: 122px;
+      min-height: 310px;
+
+      a {
+        transform: scale(1.2);
+      }
+    }
+
+    .wrap-uni-author {
+      width: 64px;
+      height: 64px;
+      margin-right: 34px;
+    }
+
+    .uni-author {
+      transform: translate(0, -4px) rotate(-90deg);
+    }
+  }
+
+  // .puzzle-me__content
+  &__content {
+    background-color: #111111;
+    position: relative;
+    // width: 1190px;
+    // height: 631px;
+    padding: 42px 71px 67px 374px;
+  }
+
+  // .puzzle-me__title
+  &__title {
+    font-size: 45px;
+    line-height: 60px;
+    position: absolute;
+    top: 74px;
+    left: -160px;
+  }
+
+  // .puzzle-me__wrap-form
+  &__wrap-form {
+    width: 742px;
+    min-height: 462px;
+  }
+
+  .uni-number {
+    position: absolute;
+    top: 58px;
+    right: 53px;
+  }
+
+  .container {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+  }
+}
+
+.form {
+  // .form__line
+  &__line {
+    padding: 30px 0 20px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.05) 0%,
+        rgba(255, 255, 255, 0) 89.29%
+      );
+    }
+  }
+
+  // .form__label
+  &__label {
+    opacity: 0.4;
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 23px;
+  }
+
+  // .form__wrap-input
+  &__wrap-input {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  // .form__list-checkers
+  &__list-checkers {
+    label {
+      font-weight: 300;
+      font-size: 20px;
+      line-height: 40px;
+      cursor: pointer;
+      margin-right: 32px;
+      position: relative;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+
+    input {
+      position: absolute;
+      opacity: 0;
+      pointer-events: auto;
+      bottom: 0;
+      left: 50%;
+
+      &:checked ~ span {
+        opacity: 1;
+      }
+    }
+
+    span {
+      opacity: 0.2;
+    }
+  }
+
+  // .form__input
+  &__input {
+    height: 40px;
+    background-color: transparent;
+    // background-color: pink;
+    width: 100%;
+    border: none;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 40px;
+    color: #ffffff;
+  }
+
+  // .form__check
+  &__check {
+    flex-shrink: 0;
+    padding-right: 73px;
+  }
+
+  // .form__submit
+  &__submit {
+    width: 144px;
+    height: 144px;
+    background-color: #151515;
+    border-radius: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    position: absolute;
+    // bottom: 80px;
+    bottom: 14px;
+    // left: 110px;
+    left: -262px;
+
+    img {
+      transition: all 0.3s;
+    }
+
+    .circles {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        pointer-events: none;
+        border-radius: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transform-origin: center center;
+        opacity: 1;
+        transition: opacity 0.3s, transform 0.3s;
+      }
+
+      &::before {
+        width: 175px;
+        height: 175px;
+        border: 1px solid rgba(255, 255, 255, 0.6);
+      }
+
+      &::after {
+        width: 208px;
+        height: 208px;
+        border: 1px solid rgba(255, 255, 255, 0.07);
+      }
+    }
+  }
+
+  .form__submit:hover {
+    img {
+      transform: translate(5px, 0);
+    }
+
+    .circles {
+      &::before,
+      &::after {
+        transform: translate(-50%, -50%) scale(1.5);
+        opacity: 0;
+      }
+    }
+  }
+}

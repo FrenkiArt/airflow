@@ -7,7 +7,42 @@ footer#footer.footer
   .container 
     |
     |
-    h3 Здесь Футер
+    .footer__row 
+      |
+      |
+      .footer__author
+        |
+        |
+        +uni-author({
+          classes: "",
+          title: "PORTFOLIO OF",
+          name: "ARSENIY POPKOV",
+        })
+        |
+        |
+      |
+      |
+      .footer__social
+        |
+        |
+        +social({
+          classes: ""
+        })
+        |
+        |
+      |
+      |
+      .footer__contacts
+        |
+        |
+        +phone(args)
+        |
+        |
+        +mail(args)
+        |
+        |
+      |
+      | 
     |
     |
   |

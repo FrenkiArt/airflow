@@ -1,0 +1,77 @@
+// src/views/components/about/about.scss
+@import '../../../assets/styles/utils/variables';
+
+.about {
+  // .about__title
+  &__title {
+    font-size: 45px;
+    line-height: 60px;
+    position: absolute;
+    top: 54px;
+    left: -125px;
+    max-width: 390px;
+    z-index: 2;
+  }
+
+  // .about__text
+  &__text {
+    position: relative;
+    padding: 60px 40px 60px 345px;
+    background-color: #111111;
+  }
+
+  // .about__text-Title
+  &__text-title {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 23px;
+    padding: 0 0 16px;
+    position: relative;
+    margin: 0 0 30px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.15) 0%,
+        rgba(255, 255, 255, 0) 107.25%
+      );
+    }
+  }
+
+  // .about__list
+  &__list {
+    margin: 0;
+    list-style-type: none;
+    font-size: 18px;
+    line-height: 40px;
+    color: rgba(255, 255, 255, 0.4);
+    padding: 0 20px 0 0;
+    display: flex;
+
+    li:first-of-type {
+      max-width: 485px;
+    }
+
+    li:last-of-type {
+      margin-left: 105px;
+      max-width: 455px;
+    }
+  }
+
+  .container {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .uni-number {
+    position: absolute;
+    top: 40px;
+    right: 60px;
+  }
+}
