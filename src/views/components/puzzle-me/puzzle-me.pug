@@ -4,7 +4,7 @@
 #puzzle-me.puzzle-me
   |
   |  
-  .container 
+  .container(data-aos="fade-up")
     |
     |
     .puzzle-me__gradient 
@@ -46,7 +46,7 @@
         form(action="#")#form.form
           |
           |
-          .form__line 
+          .form__line
             |
             |
             label(for="client_name").form__label Имя и фамилия
@@ -54,7 +54,7 @@
             |
             .form__wrap-input  
               input(type="text" id="client_name" name="client_name" placeholder="Arseniy Popkov" required minlength=3).form__input.input-name
-              .form__check
+              //-.form__check
                 +check-input({
                   classes: "valid",
                 })
@@ -62,7 +62,7 @@
             |
           |
           |
-          .form__line 
+          .form__line
             |
             |
             label(for="client_phone").form__label Ваш телефон
@@ -70,7 +70,7 @@
             |
             .form__wrap-input  
               input(type="text" id="client_phone" name="client_phone" placeholder="+7 (952) 501-73-77" required).form__input.input-phone
-              .form__check
+              //-.form__check
                 +check-input({
                   classes: "no-valid",
                 })
@@ -78,7 +78,7 @@
             |
           |
           |
-          .form__line 
+          .form__line
             |
             |
             label.form__label Ваш бюджет

@@ -1,7 +1,7 @@
 //- src/views/components/header/header.pug
 |
 |
-header.header
+header(data-aos="fade-up").header
   |
   |
   .container
@@ -18,8 +18,11 @@ header.header
       |
       a(href="#").contact-me 
         span Связаться со мной
-        <svg width="16" height="10">
+        <svg width="16" height="10" class="icon-arr">
           <use xlink:href="./assets/svg/svg_sprite.svg#arr-contact-me"></use>
+        </svg>
+        <svg width="22" height="9" class="icon-btn">
+          <use xlink:href="./assets/svg/svg_sprite.svg#icon-btn-menu"></use>
         </svg>
       |
       |

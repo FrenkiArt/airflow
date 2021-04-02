@@ -3,6 +3,11 @@
 
 .portfolio {
   padding: 73px 0 322px;
+
+  @media screen and(max-width: 800px) {
+    padding: 14px 0 322px;
+  }
+
   // .portfolio__header
   &__header {
     display: flex;
@@ -16,13 +21,31 @@
     position: relative;
     z-index: 2;
 
+    @media screen and(max-width: 800px) {
+      padding: 0;
+      margin-bottom: 20px;
+    }
+
     .left {
       font-size: 35px;
       color: rgba(255, 255, 255, 0.2);
+      white-space: nowrap;
+
+      @media screen and(max-width: 800px) {
+        font-size: 20px;
+        line-height: 25px;
+      }
     }
 
     .right {
       font-size: 25px;
+      white-space: nowrap;
+
+      @media screen and(max-width: 800px) {
+        font-weight: 500;
+        font-size: 10px;
+        line-height: 60px;
+      }
     }
   }
 
@@ -37,11 +60,27 @@
       margin: 0 24px 0 0;
       position: relative;
       z-index: 1;
+
+      @media screen and(max-width: 800px) {
+        margin: 0 13px 0 0;
+      }
+
+      &:nth-of-type(2) {
+        @media screen and(max-width: 800px) {
+          img {
+            max-height: 199px;
+          }
+        }
+      }
     }
 
     img {
       max-height: 640px;
       filter: drop-shadow(0px 4px 50px rgba(0, 0, 0, 0.25));
+
+      @media screen and(max-width: 800px) {
+        max-height: 347px;
+      }
     }
   }
 
@@ -54,6 +93,50 @@
     position: absolute;
     left: 420px;
     top: 95px;
+
+    .for-desktop {
+      position: relative;
+    }
+
+    .for-mobile {
+      display: none;
+    }
+
+    @media screen and(max-width: 1200px) {
+      padding: 48px 56px 48px 56px;
+      left: 380px;
+
+      .for-desktop {
+        display: none;
+      }
+
+      .for-mobile {
+        display: inline-block;
+      }
+    }
+
+    @media screen and(max-width: 800px) {
+      padding: 16px 26px 16px 0;
+      top: 20px;
+      left: 210px;
+
+      .for-mobile {
+        transform: translate(8px, 0) rotate(90deg);
+        opacity: 0.4;
+      }
+    }
+
+    @media screen and(max-width: 640px) {
+      .for-mobile {
+        transform: translate(3px, 0) rotate(90deg);
+      }
+    }
+
+    @media screen and(max-width: 400px) {
+      left: auto;
+      right: 0;
+      z-index: 2;
+    }
   }
 
   .see-portfolio {
@@ -65,10 +148,23 @@
     font-size: 25px;
     line-height: 60px;
 
+    @media screen and(max-width: 800px) {
+      font-size: 10px;
+      line-height: 60px;
+    }
+
     img {
       margin-left: 26px;
       transition: transform 0.3s;
       transform: translate(0px, 0);
+
+      @media screen and(max-width: 800px) {
+        width: 47px;
+      }
+
+      @media screen and(max-width: 640px) {
+        margin-left: 0;
+      }
     }
 
     &:hover {
@@ -80,11 +176,23 @@
 
   .uni-number {
     margin-right: 54px;
+
+    @media screen and(max-width: 1200px) {
+      margin-right: 20px;
+    }
+
+    @media screen and(max-width: 800px) {
+      display: none;
+    }
   }
 
   .pseudo-line {
     position: absolute;
     background-color: rgba(255, 255, 255, 0.05);
+
+    @media screen and(max-width: 800px) {
+      display: none;
+    }
 
     // .pseudo-line--1
     &--1 {
@@ -122,6 +230,13 @@
       #1d1d1d 1.74%,
       rgba(29, 29, 29, 0) 89.78%
     );
+
+    @media screen and(max-width: 800px) {
+      width: 129px;
+      height: 472px;
+      top: 0;
+      left: 48%;
+    }
   }
 
   .pseudo-bg-img {
@@ -129,6 +244,13 @@
     // top: 425px;
     bottom: -322px;
     right: 25%;
+
+    @media screen and(max-width: 800px) {
+      height: 530px;
+      right: 50%;
+      bottom: auto;
+      top: 166px;
+    }
   }
 
   .container {

@@ -14,6 +14,14 @@
     align-items: center;
     padding: 70px 0 16px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+
+    @media screen and(max-width: 800px) {
+      padding: 14px 0 10px;
+
+      .toggle-lang {
+        display: none;
+      }
+    }
   }
 }
 
@@ -54,12 +62,35 @@
   text-decoration: none;
   color: #ffffff;
 
-  /* span {
-  } */
+  @media screen and(max-width: 800px) {
+    height: 55px;
+    padding-right: 10px;
+  }
+
+  span {
+    @media screen and(max-width: 800px) {
+      display: none;
+    }
+  }
 
   svg {
     fill: #fff;
-    margin-left: 20px;
+
+    &.icon-btn {
+      display: none;
+
+      @media screen and(max-width: 800px) {
+        display: inline-block;
+      }
+    }
+
+    &.icon-arr {
+      margin-left: 20px;
+
+      @media screen and(max-width: 800px) {
+        display: none;
+      }
+    }
   }
 }
 

@@ -56,8 +56,26 @@ if (document.querySelector('.contact-me')) {
     this.classList.toggle('open');
     document.querySelector('.contact-popup').classList.toggle('open');
   });
+}
 
-  window.addEventListener('click', clickOnWindowHandler);
+if (document.querySelector('.slider__back')) {
+  document
+    .querySelector('.slider__back')
+    .addEventListener('click', function (e) {
+      e.preventDefault();
+      document.querySelector('html').classList.remove('freeze-scroll');
+      document.querySelector('.popup-slider').classList.remove('open');
+    });
+}
+
+if (document.querySelector('.see-portfolio')) {
+  document
+    .querySelector('.see-portfolio')
+    .addEventListener('click', function (e) {
+      e.preventDefault();
+      document.querySelector('html').classList.toggle('freeze-scroll');
+      document.querySelector('.popup-slider').classList.add('open');
+    });
 }
 
 /**
@@ -78,5 +96,24 @@ function clickOnWindowHandler(e) {
     document.querySelector('html').classList.remove('freeze-scroll');
   }
 
-  window.removeEventListener('click', clickOnWindowHandler);
+  /**
+   * Если клик был вне открытого попапа со слайдером
+   */
+  if (
+    !e.target.closest('.slider') &&
+    !e.target.closest('.see-portfolio') &&
+    document.querySelector('.popup-slider.open')
+  ) {
+    document.querySelector('.popup-slider').classList.remove('open');
+    document.querySelector('html').classList.remove('freeze-scroll');
+  }
+}
+
+window.addEventListener('click', clickOnWindowHandler);
+
+if (document.querySelector('.loading-site')) {
+  document.querySelector('.loading-site').classList.add('loaded');
+  setTimeout(() => {
+    document.querySelector('.loading-site').remove();
+  }, 4000);
 }
