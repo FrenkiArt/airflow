@@ -510,7 +510,16 @@ svg {
     max-width: 100%;
   }
 
+  .uni-author {
+    opacity: 0;
+  }
+
   &.loaded {
-    animation: load-site 1s ease 0s 1 forwards;
+    // animation: load-site 1s ease 0s 1 forwards;
+    animation: load-site-2 1s ease 3s 1 forwards;
+
+    .uni-author {
+      animation: blink-logo 2s ease 1s 1 alternate-reverse forwards;
+    }
   }
 }

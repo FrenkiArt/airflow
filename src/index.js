@@ -128,9 +128,9 @@ swiper.on('slideChange', function () {
   }
 });
 
-const customJsScript = document.createElement('script');
+/* const customJsScript = document.createElement('script');
 customJsScript.type = 'text/javascript';
 customJsScript.defer = true;
 customJsScript.src = './assets/js/custom-js.js';
 
-document.body.appendChild(customJsScript);
+document.body.appendChild(customJsScript); */

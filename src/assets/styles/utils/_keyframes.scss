@@ -49,3 +49,31 @@
     opacity: 0;
   }
 }
+
+@keyframes load-site-2 {
+  0% {
+    transform: translate(0, 0vh);
+  }
+
+  50% {
+    // transform: translate(0, -30vh);
+  }
+
+  100% {
+    transform: translate(0, -110vh);
+  }
+}
+
+@keyframes blink-logo {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
